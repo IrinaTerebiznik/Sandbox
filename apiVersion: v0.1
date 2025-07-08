@@ -1,0 +1,43 @@
+apiVersion: v0.1
+kind: IncidentDefinition
+metadata:
+  id: robotStopped
+  scope: account/bnHb7QHdm2tYp3qh7
+spec:
+  error:
+    manualActions:
+    - InOrbitPage-Q7YYlq
+    notificationChannels:
+    - app
+    - googleChat
+    severity: SEV 1
+  label: Robot is Stopped
+  warning:
+    manualActions:
+    - InOrbitPage-Q7YYlq
+    notificationChannels:
+    - app
+    - googleChat
+    severity: SEV 2
+---
+apiVersion: v0.1
+kind: IncidentDefinition
+metadata:
+  id: robotStopped
+  scope: tag/bnHb7QHdm2tYp3qh7/aITrGv8J7LaiN1de
+spec:
+  error:
+    manualActions:
+    - InOrbitPage-Q7YYlq
+    notificationChannels:
+    - app
+    - opsgenie
+    - googleChat
+    severity: SEV 1
+  label: Robot is Stopped
+  warning:
+    manualActions:
+    - InOrbitPage-Q7YYlq
+    notificationChannels:
+    - app
+    severity: SEV 1
