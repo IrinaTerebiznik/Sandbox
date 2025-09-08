@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>arm_control</name>
+  <version>0.0.1</version>
+  <description>ROS2 bridge Arduino serial for preset arm commands</description>
+  <maintainer email="iterebiznik@frba.utn.edu.ar">You</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+</package>
