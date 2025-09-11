@@ -17,19 +17,10 @@ El contenedor puede acceder a un dispositivo **USB** (por ejemplo, un microcontr
 ```bash
 ./build.sh
 ```
-## ▶️ Correr el contenedor sin tener el arduino conectado
+## ▶️ Correr el contenedor
+
+Si tenes configurado el USB_PORT en config/.env tomara ese, sino montara el docker sin port
 
 ```bash
-docker run -it --rm \
-  --env-file config/.env \
-  ros-ciie  
-```
-
-## ▶️ Correr el contenedor teniendo el arduino conectado
-
-```bash
-docker run -it --rm \
-  --env-file config/.env \
-  --device=$USB_PORT \
-  ros-ciie  
+./run.sh
 ```

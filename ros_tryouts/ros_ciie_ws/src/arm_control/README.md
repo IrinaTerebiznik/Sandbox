@@ -16,19 +16,20 @@ El nodo lee:
 
 Si no están definidas, usa los parámetros ROS `port` y `baud` (que también tienen default).
 
-## 2) Montaje en Docker
+## 2) Luego de montar el  Docker
 
-Asegurate de:
-- Pasar el dispositivo serie al contenedor.
-- Exportar las variables de entorno.
-- Dar permisos (grupo `dialout` o equivalente según distro).
+ ```bash
+source /opt/ros/humble/setup.bash
+cd /ros2_ws && colcon build && source install/setup.bash
+# correr el agente
+ros2 run arm_control arm_serial_bridge
+ ```
 
-### Ejemplo `docker run` (ajustá el dispositivo real):
-```bash
-docker run --rm -it \
-  --network host \
-  --device=/dev/ttyACM0 \
-  -e USB_PORT=/dev/ttyACM0 \
-  -e BAUDRATE=115200 \
-  -v /tu/ws:/ws \
-  tu-imagen-ros2-humble
+ ## 3) Testeo de conectividad
+
+ Desde otra terminal, habre una tmux console, luego:
+  ```bash
+ros2 topic pub -1 /arm/command std_msgs/String "{data: saludar}"
+ros2 topic echo /arm/command_echo
+ros2 topic echo /arm/status
+ ```
