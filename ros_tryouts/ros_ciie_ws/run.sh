@@ -15,7 +15,7 @@ if [ ! -z "$USB_PORT" ] && [ -e "$USB_PORT" ]; then
 fi
 
 docker run -it --rm \
-    -v $(pwd)/src:/ros_ciie_ws/src \
+    -v $(pwd):/ros_ciie_ws \
     $DEVICE_FLAG \
     --privileged \
     $IMAGE_NAME
