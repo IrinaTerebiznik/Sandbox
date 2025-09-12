@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'arm_control'
+package_name = 'hello_agent'
 
 setup(
     name=package_name,
@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'hello_pub = hello_agent.publisher:main',
         ],
     },
 )
