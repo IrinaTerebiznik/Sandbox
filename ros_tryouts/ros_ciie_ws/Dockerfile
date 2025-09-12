@@ -7,12 +7,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Crear workspace
-WORKDIR /ros2_ws
+WORKDIR /ros_ciie_ws
 RUN mkdir -p src
 
 # Configuración de entorno
 SHELL ["/bin/bash", "-c"]
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc \
- && echo "source /ros2_ws/install/setup.bash" >> /root/.bashrc
+ && echo "source /ros_ciie_ws/install/setup.bash" >> /root/.bashrc
 
 CMD ["bash"]

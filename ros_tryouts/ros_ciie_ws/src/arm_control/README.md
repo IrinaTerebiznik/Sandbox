@@ -20,9 +20,9 @@ Si no están definidas, usa los parámetros ROS `port` y `baud` (que también ti
 
  ```bash
 source /opt/ros/humble/setup.bash
-cd /ros2_ws && colcon build && source install/setup.bash
+cd /ros_ciie_ws && colcon build && source install/setup.bash
 # correr el agente
-ros2 run arm_control arm_serial_bridge
+ros2 run arm_control arm_node
  ```
 
  ## 3) Testeo de conectividad
