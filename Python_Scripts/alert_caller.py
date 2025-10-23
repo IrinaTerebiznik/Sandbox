@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Twilio config
 TWILIO_SID = "TU_ACCOUNT_SID"
 TWILIO_TOKEN = "TU_AUTH_TOKEN"
-TWILIO_NUMBER = "+1xxxxxxxxxx"  # Tu número Twilio
+TWILIO_NUMBER = "+1xxxxxxxxxx"  
 
 # Freshdesk config
 FRESHDESK_API_KEY = "tu_api_key"
